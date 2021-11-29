@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		831788792735A704001D7722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788782735A704001D7722 /* AppDelegate.swift */; };
 		8317887B2735A704001D7722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317887A2735A704001D7722 /* SceneDelegate.swift */; };
-		8317887D2735A704001D7722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317887C2735A704001D7722 /* ViewController.swift */; };
 		831788802735A704001D7722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8317887E2735A704001D7722 /* Main.storyboard */; };
 		831788822735A706001D7722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831788812735A706001D7722 /* Assets.xcassets */; };
 		831788852735A706001D7722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831788832735A706001D7722 /* LaunchScreen.storyboard */; };
+		831788912735AFA6001D7722 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788902735AFA6001D7722 /* Song.swift */; };
+		831788942735B24F001D7722 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788932735B24F001D7722 /* SongController.swift */; };
+		831788972735B481001D7722 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788962735B481001D7722 /* SongTableViewController.swift */; };
+		831788C227380F41001D7722 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788C127380F41001D7722 /* Playlist.swift */; };
+		831788C4273810DE001D7722 /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788C3273810DE001D7722 /* PlaylistController.swift */; };
+		831788C627381F07001D7722 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831788C527381F07001D7722 /* PlaylistsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		831788752735A704001D7722 /* PlaylistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831788782735A704001D7722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8317887A2735A704001D7722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8317887C2735A704001D7722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8317887F2735A704001D7722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831788812735A706001D7722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831788842735A706001D7722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		831788862735A706001D7722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831788902735AFA6001D7722 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		831788932735B24F001D7722 /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
+		831788962735B481001D7722 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
+		831788C127380F41001D7722 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		831788C3273810DE001D7722 /* PlaylistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
+		831788C527381F07001D7722 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		831788772735A704001D7722 /* PlaylistApp */ = {
 			isa = PBXGroup;
 			children = (
-				831788782735A704001D7722 /* AppDelegate.swift */,
-				8317887A2735A704001D7722 /* SceneDelegate.swift */,
-				8317887C2735A704001D7722 /* ViewController.swift */,
-				8317887E2735A704001D7722 /* Main.storyboard */,
-				831788812735A706001D7722 /* Assets.xcassets */,
-				831788832735A706001D7722 /* LaunchScreen.storyboard */,
-				831788862735A706001D7722 /* Info.plist */,
+				831788952735B460001D7722 /* View Controller */,
+				831788922735B217001D7722 /* Model Controller */,
+				8317888F2735AF7D001D7722 /* Models */,
+				8317888E2735A898001D7722 /* Storyboards */,
+				8317888C2735A7E8001D7722 /* Resources */,
 			);
 			path = PlaylistApp;
+			sourceTree = "<group>";
+		};
+		8317888C2735A7E8001D7722 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				831788782735A704001D7722 /* AppDelegate.swift */,
+				8317887A2735A704001D7722 /* SceneDelegate.swift */,
+				831788812735A706001D7722 /* Assets.xcassets */,
+				831788862735A706001D7722 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8317888E2735A898001D7722 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8317887E2735A704001D7722 /* Main.storyboard */,
+				831788832735A706001D7722 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8317888F2735AF7D001D7722 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				831788902735AFA6001D7722 /* Song.swift */,
+				831788C127380F41001D7722 /* Playlist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		831788922735B217001D7722 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				831788932735B24F001D7722 /* SongController.swift */,
+				831788C3273810DE001D7722 /* PlaylistController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		831788952735B460001D7722 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				831788962735B481001D7722 /* SongTableViewController.swift */,
+				831788C527381F07001D7722 /* PlaylistsViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8317887D2735A704001D7722 /* ViewController.swift in Sources */,
+				831788912735AFA6001D7722 /* Song.swift in Sources */,
 				831788792735A704001D7722 /* AppDelegate.swift in Sources */,
+				831788942735B24F001D7722 /* SongController.swift in Sources */,
+				831788972735B481001D7722 /* SongTableViewController.swift in Sources */,
+				831788C627381F07001D7722 /* PlaylistsViewController.swift in Sources */,
 				8317887B2735A704001D7722 /* SceneDelegate.swift in Sources */,
+				831788C227380F41001D7722 /* Playlist.swift in Sources */,
+				831788C4273810DE001D7722 /* PlaylistController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5L2RH989GD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaylistApp/Info.plist;
+				INFOPLIST_FILE = PlaylistApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5L2RH989GD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaylistApp/Info.plist;
+				INFOPLIST_FILE = PlaylistApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

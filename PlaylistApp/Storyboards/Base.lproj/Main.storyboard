@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gDM-iD-PM4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Playlists-->
+        <scene sceneID="xNp-Ea-iJr">
+            <objects>
+                <viewController id="brr-3y-6a2" customClass="PlaylistsViewController" customModule="PlaylistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEi-BM-KbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-zF-IuO">
+                                <rect key="frame" x="32" y="190" width="382" height="640"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" textLabel="Xlb-Wu-X7J" detailTextLabel="WvP-JK-ZqX" style="IBUITableViewCellStyleValue1" id="Xa5-j8-ra0">
+                                        <rect key="frame" x="0.0" y="44.5" width="382" height="53.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xa5-j8-ra0" id="206-rc-kWc">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="53.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xlb-Wu-X7J">
+                                                    <rect key="frame" x="20" y="14" width="37" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WvP-JK-ZqX">
+                                                    <rect key="frame" x="308.5" y="14" width="53.5" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <segue destination="Wbj-LA-YwJ" kind="show" identifier="toSongsList" id="dz2-nb-Ues"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-bh-2mh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A3-V1-xAG">
+                                        <rect key="frame" x="229" y="16" width="169" height="38"/>
+                                        <color key="backgroundColor" red="0.20709507199999999" green="0.48337144389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Create Playlist ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPlaylistButtonTapped:" destination="brr-3y-6a2" eventType="touchUpInside" id="rW5-1H-AMe"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add playlist name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-A4-mY1">
+                                        <rect key="frame" x="16" y="18" width="197" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="omJ-A4-mY1" firstAttribute="centerY" secondItem="z2S-bh-2mh" secondAttribute="centerY" id="0Aa-94-j2D"/>
+                                    <constraint firstItem="omJ-A4-mY1" firstAttribute="leading" secondItem="z2S-bh-2mh" secondAttribute="leading" constant="16" id="GrC-uz-0dH"/>
+                                    <constraint firstItem="2A3-V1-xAG" firstAttribute="top" secondItem="z2S-bh-2mh" secondAttribute="top" constant="16" id="a3p-v1-Pn2"/>
+                                    <constraint firstItem="2A3-V1-xAG" firstAttribute="leading" secondItem="omJ-A4-mY1" secondAttribute="trailing" constant="16" id="hxQ-G1-ZNx"/>
+                                    <constraint firstAttribute="trailing" secondItem="2A3-V1-xAG" secondAttribute="trailing" constant="16" id="o7W-mR-ugK"/>
+                                    <constraint firstAttribute="bottom" secondItem="2A3-V1-xAG" secondAttribute="bottom" constant="16" id="suu-dr-ooT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zEl-Pf-mWz"/>
+                        <color key="backgroundColor" red="0.20709507199999999" green="0.48337144389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zEl-Pf-mWz" firstAttribute="trailing" secondItem="z2S-bh-2mh" secondAttribute="trailing" id="99N-TW-M1V"/>
+                            <constraint firstItem="zEl-Pf-mWz" firstAttribute="bottom" secondItem="gb1-zF-IuO" secondAttribute="bottom" constant="32" id="9dJ-TT-qNm"/>
+                            <constraint firstItem="zEl-Pf-mWz" firstAttribute="trailing" secondItem="gb1-zF-IuO" secondAttribute="trailing" id="a7q-0s-Eu9"/>
+                            <constraint firstItem="z2S-bh-2mh" firstAttribute="leading" secondItem="zEl-Pf-mWz" secondAttribute="leading" id="cC1-Ll-fmz"/>
+                            <constraint firstItem="gb1-zF-IuO" firstAttribute="leading" secondItem="zEl-Pf-mWz" secondAttribute="leading" constant="32" id="mfV-4n-zSp"/>
+                            <constraint firstItem="z2S-bh-2mh" firstAttribute="top" secondItem="zEl-Pf-mWz" secondAttribute="top" id="mkA-uw-Iup"/>
+                            <constraint firstItem="gb1-zF-IuO" firstAttribute="top" secondItem="z2S-bh-2mh" secondAttribute="bottom" constant="32" id="r5B-XF-Khb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Playlists" id="fBx-5p-VAh"/>
+                    <connections>
+                        <outlet property="playlistNameTextField" destination="omJ-A4-mY1" id="qRe-dh-Qxe"/>
+                        <outlet property="playlistTableView" destination="gb1-zF-IuO" id="XwH-wm-Qje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5I-FT-6YY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="122.54464285714285"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="tHH-8a-CS9">
+            <objects>
+                <tableViewController id="Wbj-LA-YwJ" customClass="SongTableViewController" customModule="PlaylistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="N9X-Gk-Tm6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20709507199999999" green="0.48337144389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="oMZ-MI-7Sj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mul-SW-ceh">
+                                    <rect key="frame" x="20.5" y="16" width="373" height="88"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add song title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-Lc-0ff">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add artist name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRF-0O-9us">
+                                            <rect key="frame" x="0.0" y="48" width="373" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstItem="mul-SW-ceh" firstAttribute="width" secondItem="oMZ-MI-7Sj" secondAttribute="width" multiplier="0.9" id="9JS-U4-E9E"/>
+                                <constraint firstItem="mul-SW-ceh" firstAttribute="centerX" secondItem="oMZ-MI-7Sj" secondAttribute="centerX" id="OtP-CT-5K4"/>
+                                <constraint firstItem="mul-SW-ceh" firstAttribute="top" secondItem="oMZ-MI-7Sj" secondAttribute="top" constant="16" id="o2x-2v-YXD"/>
+                                <constraint firstAttribute="bottom" secondItem="mul-SW-ceh" secondAttribute="bottom" constant="16" id="uxQ-vY-am7"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" textLabel="b6A-Iq-bhW" detailTextLabel="D6z-rB-hh9" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="1EP-nv-tAa" customClass="SongTableViewController">
+                                <rect key="frame" x="0.0" y="164.5" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1EP-nv-tAa" id="UJb-Np-R40">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b6A-Iq-bhW">
+                                            <rect key="frame" x="20" y="16.5" width="46" height="32.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D6z-rB-hh9">
+                                            <rect key="frame" x="20" y="53.5" width="67" height="26"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.20709507199999999" green="0.48337144389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wbj-LA-YwJ" id="W4G-oD-JB7"/>
+                            <outlet property="delegate" destination="Wbj-LA-YwJ" id="7Aa-Vl-Sl1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Songs" id="8TM-XT-Hsh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mue-63-iGP">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addSongButtonTapped:" destination="Wbj-LA-YwJ" id="fOn-pf-Lhf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameTextField" destination="SRF-0O-9us" id="Xy5-8L-Had"/>
+                        <outlet property="songTitleTextField" destination="rdr-Lc-0ff" id="Y7m-W0-ww3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsm-c3-7Uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971.0144927536232" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AoX-VU-orE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gDM-iD-PM4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XuB-qS-F68">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="brr-3y-6a2" kind="relationship" relationship="rootViewController" id="ONu-nV-Hjg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB7-bl-EbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.57971014492756" y="122.54464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
